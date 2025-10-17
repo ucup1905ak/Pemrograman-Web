@@ -1,70 +1,59 @@
-/* ========================================
-   TYPOGRAPHY AND HEADERS
-   ======================================== */
-
-/* Header Section - Professional page title area */
-header {
-    text-align: center;        /* Center all content horizontally */
-    margin-bottom: 50px;       /* Professional space below header */
-    padding-bottom: 25px;      /* Professional inner space at bottom */
-    border-bottom: 3px solid #3b82f6;  /* Professional blue accent line */
-    position: relative;        /* Allows positioning of pseudo-elements */
+h1 {
+    color: var(--text-primary);
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--text-primary) 0%, rgba(255, 255, 255, 0.6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* Professional decorative element - Clean corporate accent */
-header::after {
-    content: '●';             /* Professional bullet point */
-    position: absolute;        /* Positioned relative to header */
-    bottom: -8px;             /* 8px below header (on the border line) */
-    left: 50%;                /* Horizontally centered (50% from left) */
-    transform: translateX(-50%);  /* Adjust position to truly center the element */
-    background: rgba(255, 255, 255, 0.95);  /* Professional white background */
-    padding: 0 12px;          /* Professional horizontal padding */
-    font-size: 0.8em;         /* Smaller, subtle accent */
-    color: #3b82f6;           /* Professional blue color */
+h2 {
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.75rem;
+    letter-spacing: -0.02em;
 }
 
-/* Professional page title styling */
-.main-title {
-    color: #1e293b;           /* Professional dark slate color */
-    font-size: 2.5em;         /* Bold professional size */
-    margin-bottom: 15px;       /* Professional space below title */
-    font-weight: 600;          /* Semi-bold professional weight */
-    letter-spacing: 1px;       /* Subtle professional letter spacing */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle professional shadow */
-    /* Professional shadow for depth without being flashy */
+p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
 }
 
-/* Section titles (legends) - Professional headers for each fieldset */
-.section-title {
-    font-size: 1.3em;                   /* Professional title size */
-    font-weight: 600;                   /* Professional semi-bold weight */
-    color: #1e293b;                     /* Professional dark slate color */
-    margin-bottom: 25px;                /* Professional space below title */
-    padding: 10px 20px;                 /* Professional inner spacing */
+.text-center {
+    text-align: center;
+}
+
+.text-large {
+    font-size: 1.125rem;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
     
-    /* Professional background with subtle shadow */
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
-    border-radius: 6px;                 /* Professional rounded corners */
-    border-left: 4px solid #3b82f6;     /* Professional blue accent border */
-    letter-spacing: 0.5px;              /* Professional letter spacing */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);  /* Subtle professional shadow */
+    h2 {
+        font-size: 1.5rem;
+    }
 }
 
-/* Professional form field labels */
-.form-label {
-    font-weight: 500;                   /* Professional medium weight */
-    margin-bottom: 8px;                 /* Professional space between label and input */
-    color: #374151;                     /* Professional gray color */
-    font-size: 0.95em;                  /* Professional label size */
-    letter-spacing: 0.3px;              /* Subtle professional spacing */
-}
-
-/* Professional radio button label */
-.radio-label {
-    cursor: pointer;                   /* Professional hand cursor */
-    font-weight: 400;                  /* Professional normal weight */
-    margin-bottom: 0;                  /* Professional no margin */
-    color: #374151;                    /* Professional gray text */
-    font-size: 0.95em;                 /* Professional label size */
-}

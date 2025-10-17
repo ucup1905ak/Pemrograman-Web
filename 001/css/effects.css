@@ -1,31 +1,75 @@
-/* ========================================
-   ANIMATIONS, TRANSITIONS AND EFFECTS
-   ======================================== */
-
-/* Form entrance animation */
-.reservation-form {
-    animation: fadeInUp 0.8s ease-out;  /* Custom animation: name duration timing */
+.fade-in {
+    animation: liquidFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Keyframe definition for fade-in-up animation */
-@keyframes fadeInUp {
+.slide-up {
+    animation: liquidSlideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-effect {
+    background: var(--glass-primary);
+    backdrop-filter: blur(var(--backdrop-blur));
+    -webkit-backdrop-filter: blur(var(--backdrop-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: 
+        0 8px 32px var(--glass-shadow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.liquid-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.liquid-hover:hover {
+    transform: translateY(-2px) scale(1.02);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.25),
+        0 8px 32px rgba(0, 122, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.liquid-glow:hover {
+    box-shadow: 
+        0 0 60px rgba(0, 122, 255, 0.3),
+        0 20px 60px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes liquidFadeIn {
     from {
-        opacity: 0;                    /* Start invisible */
-        transform: translateY(30px);   /* Start 30px below final position */
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
     }
     to {
-        opacity: 1;                    /* End fully visible */
-        transform: translateY(0);      /* End at normal position */
+        opacity: 1;
+        backdrop-filter: blur(var(--backdrop-blur));
+        -webkit-backdrop-filter: blur(var(--backdrop-blur));
     }
 }
 
-/* Hover effects for form sections */
-fieldset:hover {
-    transform: translateY(-3px);       /* Lift up slightly on hover */
-    transition: all 0.3s ease;         /* Smooth animation */
-    
-    /* Enhanced shadow on hover */
-    box-shadow: 
-        0 12px 40px rgba(139, 127, 115, 0.15),        /* Large soft shadow */
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);       /* Inner highlight */
+@keyframes liquidSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        backdrop-filter: blur(var(--backdrop-blur));
+        -webkit-backdrop-filter: blur(var(--backdrop-blur));
+    }
+}
+
+@keyframes liquidPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 122, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 122, 255, 0.4);
+    }
 }

@@ -1,57 +1,10 @@
-/* ========================================
-   MAIN CSS FILE - IMPORTS ALL MODULES
-   Professional Corporate Style Architecture
-   ======================================== */
+@import url('base.css');
+@import url('container.css');
+@import url('header.css');
+@import url('video.css');
+@import url('form.css');
+@import url('button.css');
+@import url('typography.css');
+@import url('effects.css');
+@import url('responsive.css');
 
-/* Import all CSS modules in logical order */
-
-/* 1. Reset and base styles - Foundation layer */
-@import url('./reset.css');
-
-/* 2. Layout and container - Structure layer */
-@import url('./layout.css');
-
-/* 3. Background video and effects - Background layer */
-@import url('./video.css');
-
-/* 4. Typography and text styling - Content layer */
-@import url('./typography.css');
-
-/* 5. Form elements and inputs - Interactive layer */
-@import url('./forms.css');
-
-/* 6. Buttons and controls - Action layer */
-@import url('./buttons.css');
-
-/* 7. Animations and transitions - Enhancement layer */
-@import url('./effects.css');
-
-/* 8. Responsive design - Adaptation layer */
-@import url('./responsive.css');
-
-/* ========================================
-   CSS ARCHITECTURE NOTES:
-   
-   This modular approach provides:
-   
-   📁 ORGANIZATION:
-   - Each file has a specific purpose
-   - Easy to find and modify specific features
-   - Better collaboration for teams
-   
-   🔧 MAINTAINABILITY:
-   - Changes isolated to relevant files
-   - Reduced risk of breaking other styles
-   - Clear separation of concerns
-   
-   📈 SCALABILITY:
-   - Easy to add new modules
-   - Can disable features by commenting imports
-   - Reusable across projects
-   
-   🎯 PERFORMANCE:
-   - Browser can cache individual files
-   - Only load needed modules
-   - Easier to optimize specific areas
-   
-   ======================================== */

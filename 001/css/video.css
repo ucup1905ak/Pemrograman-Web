@@ -1,50 +1,44 @@
-/* ========================================
-   BACKGROUND VIDEO AND OVERLAY EFFECTS
-   ======================================== */
-
-/* Background Video - Professional video setup */
 .bg-video {
-    position: fixed;            /* Stays in same place when scrolling */
-    top: 0;                    /* Aligned to top of viewport */
-    left: 0;                   /* Aligned to left of viewport */
-    width: 100vw;              /* 100% of viewport width (vw = viewport width) */
-    height: 100vh;             /* 100% of viewport height (vh = viewport height) */
-    object-fit: cover;         /* Scales video to cover entire area, may crop edges */
-    z-index: -10;              /* Far behind other content (negative z-index) */
-    opacity: 0.6;              /* 60% visible for professional video prominence */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -10;
+    opacity: 0.4;
+    filter: blur(2px) saturate(1.2);
 }
 
-/* Professional video overlay - Subtle corporate dimming */
 body::after {
-    content: '';               /* Required for pseudo-elements */
-    position: fixed;           /* Covers entire viewport */
-    top: 0;                   /* Top edge of viewport */
-    left: 0;                  /* Left edge of viewport */
-    width: 100%;              /* Full width */
-    height: 100%;             /* Full height */
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(135deg, 
-        rgba(30, 64, 175, 0.1) 0%,      /* Subtle blue overlay (corporate) */
-        rgba(0, 0, 0, 0.3) 50%,         /* Professional black dimming */
-        rgba(59, 130, 246, 0.1) 100%);  /* Subtle blue accent */
-    z-index: -9;              /* Above video (-10) but below content (1) */
-    pointer-events: none;     /* Allows clicks to pass through this layer */
+        rgba(0, 122, 255, 0.08) 0%,
+        rgba(175, 82, 222, 0.06) 30%,
+        rgba(0, 0, 0, 0.4) 70%,
+        rgba(0, 122, 255, 0.05) 100%);
+    z-index: -9;
+    pointer-events: none;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
 }
 
-/* Professional texture overlay across entire page */
 body::before {
-    content: '';                      /* Required for pseudo-elements */
-    position: fixed;                  /* Covers viewport, doesn't scroll */
-    top: 0;                          /* Cover full height */
-    left: 0;                         /* Cover full width */
-    width: 100%;                     /* Full viewport width */
-    height: 100%;                    /* Full viewport height */
-    
-    /* Professional subtle texture gradients */
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: 
-        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        linear-gradient(135deg, rgba(59, 130, 246, 0.02) 0%, transparent 50%);
-    
-    pointer-events: none;            /* Allow clicks to pass through */
-    z-index: -1;                     /* Behind content but above video overlay */
+        radial-gradient(circle at 25% 25%, rgba(0, 122, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 75% 75%, rgba(175, 82, 222, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.05) 0%, transparent 30%);
+    pointer-events: none;
+    z-index: -8;
 }
