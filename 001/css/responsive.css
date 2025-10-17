@@ -1,0 +1,54 @@
+/* ========================================
+   RESPONSIVE DESIGN AND MEDIA QUERIES
+   ======================================== */
+
+/* Medium screens (tablets) - 768px and smaller */
+@media (max-width: 768px) {
+    .container {
+        margin: 15px;              /* Smaller margins on mobile */
+        padding: 20px;             /* Less padding to save space */
+    }
+    
+    .main-title {
+        font-size: 1.8em;          /* Smaller title on mobile */
+        letter-spacing: 2px;       /* Less letter spacing */
+    }
+    
+    .radio-group {
+        flex-direction: column;    /* Stack radio buttons vertically */
+        gap: 15px;                /* Less gap between options */
+    }
+    
+    .form-actions {
+        flex-direction: column;    /* Stack buttons vertically */
+        align-items: center;       /* Center buttons */
+        gap: 15px;                /* Space between buttons */
+    }
+    
+    .submit-btn,
+    .reset-btn {
+        width: 100%;              /* Full width buttons */
+        max-width: 250px;         /* But not wider than 250px */
+    }
+}
+
+/* Small screens (phones) - 480px and smaller */
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;             /* Even smaller margins */
+        padding: 15px;            /* Even less padding */
+    }
+    
+    .main-title {
+        font-size: 1.6em;         /* Even smaller title */
+        letter-spacing: 1px;      /* Minimal letter spacing */
+    }
+    
+    fieldset {
+        padding: 18px;            /* Less padding in form sections */
+    }
+    
+    .section-title {
+        font-size: 1.1em;         /* Smaller section titles */
+    }
+}

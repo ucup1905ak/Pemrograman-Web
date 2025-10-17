@@ -1,0 +1,26 @@
+/* ========================================
+   CSS RESET AND BASE STYLES
+   ======================================== */
+
+/* Universal Reset - Removes browser default styling */
+* {
+    margin: 0;           /* Remove default margins from all elements */
+    padding: 0;          /* Remove default padding from all elements */
+    box-sizing: border-box;  /* Include padding and border in element's total width/height */
+}
+
+/* Body - Main container for entire page */
+body {
+    /* Professional font stack - Corporate-friendly fonts */
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;        /* Professional line spacing (1.6 = 160% of font size) */
+    color: #2c3e50;          /* Professional dark blue-gray text color */
+    background: #1a1a1a;     /* Dark professional background if video fails */
+    background-attachment: fixed;  /* Background stays fixed during scroll */
+    min-height: 100vh;       /* Minimum height = 100% of viewport height */
+}
+
+/* Remove browser default focus outlines - we create custom professional ones */
+*:focus {
+    outline: none;           /* Remove all default focus outlines */
+}

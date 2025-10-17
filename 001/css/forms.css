@@ -1,0 +1,153 @@
+/* ========================================
+   FORM ELEMENTS AND INPUT FIELDS
+   ======================================== */
+
+/* Fieldsets - Professional form section containers */
+fieldset {
+    border: 2px solid rgba(59, 130, 246, 0.2);  /* Professional blue border */
+    border-radius: 8px;                  /* Clean professional corners */
+    padding: 30px;                       /* Professional inner spacing */
+    margin-bottom: 35px;                 /* Professional space between sections */
+    
+    /* Professional glass-morphism background */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.85) 100%);
+    position: relative;                  /* Allows pseudo-element positioning */
+    transition: all 0.3s ease;          /* Smooth professional animation */
+    /* Professional hover and focus effects */
+}
+
+/* Professional accent bar for each fieldset - creates visual hierarchy */
+fieldset::before {
+    content: '';                         /* Required for pseudo-elements */
+    position: absolute;                  /* Positioned relative to fieldset */
+    top: 0;                             /* At the very top */
+    left: 0;                            /* From left edge */
+    right: 0;                           /* To right edge */
+    height: 4px;                        /* 4px professional accent strip */
+    border-radius: 8px 8px 0 0;         /* Rounded top corners only */
+}
+
+/* Professional color coding for each form section */
+.personal-info::before {
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);  /* Professional blue gradient */
+}
+
+.reservation-details::before {
+    background: linear-gradient(90deg, #059669, #047857);  /* Professional green gradient */
+}
+
+.payment-info::before {
+    background: linear-gradient(90deg, #dc2626, #b91c1c);  /* Professional red gradient */
+}
+
+/* Form input grouping - Each label + input pair */
+.form-group {
+    margin-bottom: 25px;                /* Professional space between form groups */
+    display: flex;                      /* Flexbox layout */
+    flex-direction: column;             /* Stack label above input vertically */
+}
+
+/* Professional text inputs and dropdowns */
+.form-input,
+.form-select {
+    padding: 14px 16px;                 /* Professional inner spacing */
+    border: 2px solid #d1d5db;          /* Professional gray border */
+    border-radius: 6px;                 /* Clean professional corners */
+    font-size: 1em;                     /* Professional text size */
+    transition: all 0.3s ease;          /* Smooth professional transitions */
+    
+    /* Professional clean background */
+    background: linear-gradient(135deg, #ffffff, #f9fafb);
+    color: #1f2937;                     /* Professional dark text */
+    font-family: inherit;               /* Inherit professional font */
+}
+
+/* Professional focus state - When user clicks/tabs into input */
+.form-input:focus,
+.form-select:focus {
+    outline: none;                      /* Remove browser default outline */
+    border-color: #3b82f6;             /* Professional blue focus border */
+    
+    /* Professional focus shadow */
+    box-shadow: 
+        0 0 0 3px rgba(59, 130, 246, 0.1),     /* Professional blue glow */
+        0 2px 4px rgba(0, 0, 0, 0.05);         /* Subtle professional shadow */
+    background: #ffffff;                /* Clean white background when focused */
+}
+
+/* Professional form validation states */
+.form-input:required:invalid {
+    border-color: #ef4444;             /* Professional red for invalid fields */
+}
+
+.form-input:required:valid {
+    border-color: #10b981;             /* Professional green for valid fields */
+}
+
+/* Professional dropdown styling */
+.form-select {
+    cursor: pointer;                    /* Professional hand cursor */
+    
+    /* Professional dropdown arrow using SVG */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%236b7280" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;       /* Single arrow image */
+    background-position: right 16px center;  /* Professional positioning */
+    background-size: 12px;              /* Professional arrow size */
+    appearance: none;                   /* Remove browser default styling */
+}
+
+/* Professional hover effects for input fields */
+.form-input:hover,
+.form-select:hover {
+    border-color: rgba(59, 130, 246, 0.4);  /* Professional blue hover border */
+    box-shadow: 
+        0 2px 8px rgba(59, 130, 246, 0.1),           /* Professional blue shadow */
+        0 0 0 1px rgba(255, 255, 255, 0.8);          /* Professional highlight */
+}
+
+/* Professional radio button styling */
+.radio-group {
+    display: flex;                      /* Professional flexbox layout */
+    gap: 20px;                         /* Professional space between options */
+    margin-top: 10px;                  /* Professional space above group */
+    flex-wrap: wrap;                   /* Professional wrapping for mobile */
+}
+
+/* Individual radio button container */
+.radio-option {
+    display: flex;                      /* Professional flex alignment */
+    align-items: center;               /* Professional vertical centering */
+    gap: 10px;                         /* Professional space between radio and label */
+    padding: 10px 16px;                /* Professional inner spacing */
+    
+    /* Professional subtle background */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.8));
+    border-radius: 6px;                /* Professional rounded corners */
+    border: 2px solid rgba(209, 213, 219, 0.5);  /* Professional subtle border */
+    transition: all 0.3s ease;         /* Professional smooth animation */
+}
+
+/* Professional hover effect for radio options */
+.radio-option:hover {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.95), rgba(241, 245, 249, 0.9));
+    border-color: rgba(59, 130, 246, 0.3);  /* Professional blue hover border */
+    transform: translateY(-1px);       /* Subtle professional lift */
+}
+
+/* Professional radio button input styling */
+.form-radio {
+    width: 18px;                       /* Professional radio button size */
+    height: 18px;                      /* Professional radio button size */
+    cursor: pointer;                   /* Professional hand cursor */
+    accent-color: #3b82f6;            /* Professional blue accent color */
+}
+
+/* Form validation styling for focused invalid inputs */
+.form-input:required:focus:invalid {
+    border-color: #ef4444;             /* Professional red for invalid fields */
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);  /* Professional red glow */
+}
+
+.form-select:required:invalid {
+    border-color: #ef4444;             /* Professional red for invalid dropdowns */
+}
