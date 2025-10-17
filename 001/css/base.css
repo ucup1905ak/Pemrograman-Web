@@ -8,7 +8,7 @@
     --text-secondary: rgba(255, 255, 255, 0.7);
     --accent-blue: #007AFF;
     --accent-purple: #AF52DE;
-    --backdrop-blur: 40px;
+    --backdrop-blur: 20px;
 }
 
 * {

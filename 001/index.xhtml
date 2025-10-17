@@ -17,10 +17,17 @@
         <div class="container">
             
             <header>
-                            <img src="./images/LOGO ATMA  512px.png" alt="Logo UAJY" height="64px" />
-                            <h1 class="main-title">Reservation Hotel Room</h1>
-                            <img src="./images/LOGO ATMA  512px.png" alt="Logo UAJY" height="64px" />
-                            <button type="button" id="refresh-btn" class="refresh-btn" onclick="forceRefresh()">🔄 Refresh</button>
+
+                            <div class="title-row">
+                                <img src="./images/LOGO ATMA  512px.png" alt="Logo UAJY" height="64px" />
+                                <h1 class="main-title">Reservation Hotel Room</h1>
+                                <img src="./images/LOGO ATMA  512px.png" alt="Logo UAJY" height="64px" />
+                            </div>
+                            <div class="student-info">
+                                <p class="student-name">Farelino Alexander Kim</p>
+                                <p class="student-npm">NPM: 240713000</p>
+                                <p class="student-course">Mata Kuliah: Pemrograman Web Dasar F</p>
+                            </div>
                 
             </header>
             
@@ -83,14 +90,14 @@
                         <div class="form-group">
                             <label class="form-label">Breakfast Option</label>
                             <div class="radio-group">
-                                <div class="radio-option">
+                                <label class="radio-option" for="with_breakfast">
                                     <input type="radio" id="with_breakfast" name="breakfast" value="with" class="form-radio"/>
-                                    <label for="with_breakfast" class="radio-label">With Breakfast</label>
-                                </div>
-                                <div class="radio-option">
+                                    <span class="radio-text">With Breakfast</span>
+                                </label>
+                                <label class="radio-option" for="without_breakfast">
                                     <input type="radio" id="without_breakfast" name="breakfast" value="without" class="form-radio"/>
-                                    <label for="without_breakfast" class="radio-label">Without Breakfast</label>
-                                </div>
+                                    <span class="radio-text">Without Breakfast</span>
+                                </label>
                             </div>
                         </div>
                     </fieldset>
@@ -118,35 +125,13 @@
                     </fieldset>
 
                     <!-- Submit Button -->
-                    <div class="form-actions ">
-                        <button type="submit" id="confirmation" class="submit-btn">Confirm Reservation</button>
-                        <button type="reset" id="reset-form" class="reset-btn">Reset Form</button>
+                    <div class="btn-group">
+                        <button type="submit" id="confirmation" class="btn btn-primary">Confirm Reservation</button>
+                        <button type="reset" id="reset-form" class="btn btn-secondary">Reset Form</button>
                     </div>
                 </form>
             </div>
         </div>
-        
-        <script type="text/javascript">
-            function forceRefresh() {
-                // Force refresh bypassing cache
-                window.location.reload(true);
-                
-                // Alternative method for modern browsers
-                if (window.location.reload.toString().indexOf('forceReload') !== -1) {
-                    window.location.reload(true);
-                } else {
-                    // For browsers that don't support forceReload parameter
-                    window.location.href = window.location.href + '?t=' + new Date().getTime();
-                }
-            }
-            
-            // Add keyboard shortcut Ctrl+F5 for refresh
-            document.addEventListener('keydown', function(event) {
-                if (event.ctrlKey && event.key === 'F5') {
-                    event.preventDefault();
-                    forceRefresh();
-                }
-            });
-        </script>
+    
     </body>
 </html>

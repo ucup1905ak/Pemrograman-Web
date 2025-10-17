@@ -36,8 +36,6 @@
 
 .btn-secondary {
     background: var(--glass-secondary);
-    backdrop-filter: blur(var(--backdrop-blur));
-    -webkit-backdrop-filter: blur(var(--backdrop-blur));
     color: var(--text-primary);
     box-shadow: 
         0 4px 16px rgba(0, 0, 0, 0.1),
@@ -74,8 +72,6 @@
     top: 1rem;
     right: 1rem;
     background: var(--glass-secondary);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
     color: var(--text-primary);
     border: 1px solid var(--glass-border);
     border-radius: 12px;
