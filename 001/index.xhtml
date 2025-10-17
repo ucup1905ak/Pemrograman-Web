@@ -20,6 +20,7 @@
                             <img src="./images/LOGO ATMA  512px.png" alt="Logo UAJY" height="64px" />
                             <h1 class="main-title">Reservation Hotel Room</h1>
                             <img src="./images/LOGO ATMA  512px.png" alt="Logo UAJY" height="64px" />
+                            <button type="button" id="refresh-btn" class="refresh-btn" onclick="forceRefresh()">🔄 Refresh</button>
                 
             </header>
             
@@ -124,5 +125,28 @@
                 </form>
             </div>
         </div>
+        
+        <script type="text/javascript">
+            function forceRefresh() {
+                // Force refresh bypassing cache
+                window.location.reload(true);
+                
+                // Alternative method for modern browsers
+                if (window.location.reload.toString().indexOf('forceReload') !== -1) {
+                    window.location.reload(true);
+                } else {
+                    // For browsers that don't support forceReload parameter
+                    window.location.href = window.location.href + '?t=' + new Date().getTime();
+                }
+            }
+            
+            // Add keyboard shortcut Ctrl+F5 for refresh
+            document.addEventListener('keydown', function(event) {
+                if (event.ctrlKey && event.key === 'F5') {
+                    event.preventDefault();
+                    forceRefresh();
+                }
+            });
+        </script>
     </body>
 </html>
