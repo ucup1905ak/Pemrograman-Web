@@ -3,11 +3,116 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
     <head>
         <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
-        <title>Judul</title>
+        <title>Reservation Hotel Room</title>
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
-        <h1>Judul</h1>
-        
+        <div class="container">
+            <header>
+                <h1 class="main-title">Reservation Hotel Room</h1>
+            </header>
+            
+            <div class="form-container">
+                <form id="hotel-reservation-form" class="reservation-form">
+                    <!-- Personal Information Section -->
+                    <fieldset class="personal-info">
+                        <legend class="section-title">Personal Data</legend>
+                        <div class="form-group">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" id="nama" name="nama" class="form-input" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select id="gender" name="gender" class="form-select" required="required">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone_number" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone_number" name="phone_number" class="form-input" required="required"/>
+                        </div>
+                    </fieldset>
+
+                    <!-- Reservation Details Section -->
+                    <fieldset class="reservation-details">
+                        <legend class="section-title">Reservation Room Details</legend>
+                        <div class="form-group">
+                            <label for="reservor_name" class="form-label">Reservator Name</label>
+                            <input type="text" id="reservor_name" name="reservor_name" class="form-input" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking_date" class="form-label">Booking Date</label>
+                            <input type="date" id="booking_date" name="booking_date" class="form-input" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="room_type" class="form-label">Room Type</label>
+                            <select id="room_type" name="room_type" class="form-select" required="required">
+                                <option value="">Select Room Type</option>
+                                <option value="deluxe">Deluxe</option>
+                                <option value="standard">Standard</option>
+                                <option value="suite">Suite</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bed_type" class="form-label">Bed Type</label>
+                            <select id="bed_type" name="bed_type" class="form-select" required="required">
+                                <option value="">Select Bed Type</option>
+                                <option value="single">Single Bed</option>
+                                <option value="double">Double Bed</option>
+                                <option value="queen">Queen Size</option>
+                                <option value="king">King Size</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Breakfast Option</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="with_breakfast" name="breakfast" value="with" class="form-radio"/>
+                                    <label for="with_breakfast" class="radio-label">With Breakfast</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="without_breakfast" name="breakfast" value="without" class="form-radio"/>
+                                    <label for="without_breakfast" class="radio-label">Without Breakfast</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Payment Section -->
+                    <fieldset class="payment-info">
+                        <legend class="section-title">Payment Information</legend>
+                        <div class="form-group">
+                            <label for="check_in_date" class="form-label">Check-in Date</label>
+                            <input type="date" id="check_in_date" name="check_in_date" class="form-input" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="check_out_date" class="form-label">Check-out Date</label>
+                            <input type="date" id="check_out_date" name="check_out_date" class="form-input" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment_method" class="form-label">Payment Method</label>
+                            <select id="payment_method" name="payment_method" class="form-select" required="required">
+                                <option value="">Select Payment Method</option>
+                                <option value="cash">Cash</option>
+                                <option value="qris">QRIS</option>
+                                <option value="card">Debit/Credit Card</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" id="confirmation" class="submit-btn">Confirm Reservation</button>
+                        <button type="reset" id="reset-form" class="reset-btn">Reset Form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
