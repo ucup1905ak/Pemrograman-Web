@@ -4,30 +4,9 @@ header {
     align-items: center;
     text-align: center;
     margin: 0 auto 3rem auto;
-    padding: 2rem;
     position: relative;
-    background: var(--glass-secondary);
-    backdrop-filter: blur(var(--backdrop-blur));
-    -webkit-backdrop-filter: blur(var(--backdrop-blur));
-    border-radius: 20px;
-    border: 1px solid var(--glass-border);
-    box-shadow: 
-        0 8px 32px var(--glass-shadow),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    width: 100%;
 }
 
-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
-    border-radius: 1px;
-}
 
 .title-row {
     display: flex;
@@ -44,10 +23,6 @@ header::after {
     margin-bottom: 1rem;
     font-weight: 600;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, var(--text-primary) 0%, rgba(255, 255, 255, 0.6) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     margin: 0;
     flex: 1;
     text-align: center;
@@ -55,7 +30,7 @@ header::after {
 
 .student-info {
     margin-top: 1.5rem;
-    padding: 1rem 1.5rem;
+    padding: 2rem 2rem;
     background: var(--glass-primary);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
@@ -67,23 +42,23 @@ header::after {
 .student-name {
     color: var(--text-primary);
     font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
     letter-spacing: -0.01em;
 }
 
 .student-npm {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.005em;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.01em;
 }
 
 .student-course {
-    color: var(--accent-blue);
-    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-size: 1.1rem;
     font-weight: 500;
-    margin-bottom: 0;
-    letter-spacing: -0.005em;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
 }

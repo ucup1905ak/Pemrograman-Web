@@ -52,7 +52,6 @@
     }
 }
 
-/* iPhone and small mobile devices */
 @media (max-width: 430px) {
     html {
         font-size: 14px;

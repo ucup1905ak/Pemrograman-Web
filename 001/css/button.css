@@ -16,7 +16,7 @@
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 100%);
+    background: var(--accent-blue);
     color: rgba(255, 255, 255, 0.95);
     border: none;
     box-shadow: 
@@ -31,7 +31,7 @@
         0 12px 40px rgba(0, 122, 255, 0.4),
         0 4px 16px rgba(0, 0, 0, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    background: linear-gradient(135deg, #0056D6 0%, #9B44C8 100%);
+    background: #0056D6;
 }
 
 .btn-secondary {
@@ -67,41 +67,3 @@
     }
 }
 
-.refresh-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--glass-secondary);
-    color: var(--text-primary);
-    border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    padding: 0.75rem 1.25rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    font-family: inherit;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 
-        0 4px 16px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    z-index: 10;
-}
-
-.refresh-btn:hover {
-    background: var(--glass-tertiary);
-    transform: translateY(-1px) scale(1.05);
-    box-shadow: 
-        0 8px 24px rgba(0, 0, 0, 0.15),
-        0 2px 8px rgba(0, 122, 255, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.refresh-btn:active {
-    transform: translateY(0) scale(0.98);
-    box-shadow: 
-        0 2px 8px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
