@@ -6,11 +6,9 @@ Thank you gaes
 
 ## Project Folders
 
-Navigate to specific assignments and projects:
-
 Control Structures
-  - 📄 [Activity Mandiri](./Minggu09/activity-mandiri/) 
-  - 📄 [If-Else Internal](./Minggu09/xhtmljavascript-if-else-internal/) 
-  - 📄 [If-Else External](./Minggu09/xhtml-javascript-if-else-eksternal/)
-  - 📄 [Switch-Case](./Minggu09/xhtmljavascript-switch-case-internal/) 
-  - 📄 [Form Validation](./Minggu09/xhtmljavascript-form-validation/) 
+  - 📄 [Activity Mandiri](./activity-mandiri/) 
+  - 📄 [If-Else Internal](./xhtmljavascript-if-else-internal/) 
+  - 📄 [If-Else External](./xhtml-javascript-if-else-eksternal/)
+  - 📄 [Switch-Case](./xhtmljavascript-switch-case-internal/) 
+  - 📄 [Form Validation](./xhtmljavascript-form-validation/) 
