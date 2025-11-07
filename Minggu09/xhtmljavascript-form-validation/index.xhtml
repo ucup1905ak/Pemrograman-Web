@@ -5,8 +5,29 @@
         <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
         <title>xhtmljavascript-form-validation</title>
         <link rel="stylesheet" href="" />
-        <script type="text/javascript" src="js/validate-form.js"></script>
-        
+        <script type="text/javascript">
+            function fn_ValForm(){
+                var sMsg = "";
+
+                if(document.getElementById("name").value == ""){
+                    sMsg += "\n\n[!] ANDA BELUM ISI NAMA [!]"
+                }
+                if(document.getElementById("email").value == ""){
+                    sMsg += "\n\n[!] ANDA BELUM ISI EMAIL [!]"
+                }
+                if(document.getElementById("message").value == ""){
+                    sMsg += "\n\n[!] ANDA BELUM ISI PESAN [!]"
+                }
+
+                if(sMsg!= ""){
+                    alert("Peringatan:\n " + sMsg);
+                    return false;
+                }else {
+                    return true;
+                }
+                
+            }
+        </script>
     </head>
     <body>
         <h1>xhtmljavascript-form-validation</h1>
@@ -38,7 +59,7 @@
                                 <label for="message">Pesan</label>
                             </td>
                             <td class="fieldcell">
-                                <input name="message" type="text" id="message" />
+                                <textarea id="message" name="message" cols="30" rows="10"></textarea>
                             </td>
                         </tr>
                         <tr>

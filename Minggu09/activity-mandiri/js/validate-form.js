@@ -1,6 +1,5 @@
 function validateEmail(a){
-    let text = a;
-    return text.search(/^[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]@[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]\.[a-z0-9]{2,4}$/i) == 0;
+    return a.search(/^[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]@[a-z0-9][a-z0-9_\.-]{0,}[a-z0-9]\.[a-z0-9]{2,4}$/i) == 0;
 }
 function fn_ValForm(){
     var sMsg = "";
@@ -21,5 +20,5 @@ function fn_ValForm(){
     }else {
         return true;
     }
-    
+
 }
