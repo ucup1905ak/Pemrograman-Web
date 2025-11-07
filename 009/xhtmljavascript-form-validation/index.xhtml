@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+        <title>xhtmljavascript-form-validation</title>
+        <link rel="stylesheet" href="" />
+        <script type="text/javascript">
+            function fn_ValForm(){
+                var sMsg = "";
+
+                if(document.getElementById("name").value == ""){
+                    sMsg += "\n\n[!] ANDA BELUM ISI NAMA [!]"
+                }
+                if(document.getElementById("email").value == ""){
+                    sMsg += "\n\n[!] ANDA BELUM ISI EMAIL [!]"
+                }
+                if(document.getElementById("message").value == ""){
+                    sMsg += "\n\n[!] ANDA BELUM ISI PESAN [!]"
+                }
+
+                if(sMsg!= ""){
+                    alert("Peringatan:\n " + sMsg);
+                    return false;
+                }else {
+                    return true;
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1>xhtmljavascript-form-validation</h1>
+
+        <div id="wrapper">
+            <h1>Contact Use</h1>
+            <form id="contact" method="post" action="">
+                <fieldset>
+                    <legend>Form Kontak</legend>
+                    <table summary="Form kontak sederhana">
+                        <tr>
+                            <td class="labelcell">
+                                <label for="name">Nama</label>
+                            </td>
+                            <td class="fieldcell">
+                                <input type="text" value="" id="name" name="name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelcell">
+                                <label for="email">E-mail</label>
+                            </td>
+                            <td class="fieldcell">
+                                <input type="text" id="email" name="email" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelcell">
+                                <label for="message">Pesan</label>
+                            </td>
+                            <td class="fieldcell">
+                                <input name="message" type="text" id="message" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelcell" colspan="2">
+                                <input type="submit" id="submit" name="submit" value="Send" class="button"
+                                onclick="return fn_ValForm();"/>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+    
+    </body>
+</html>
