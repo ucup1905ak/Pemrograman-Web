@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="id" lang="id">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+        <title>DOM Calculator</title>
+        <script type="text/javascript" src="js/calculator.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body onload="init()">
+        <h1 id="myTitle" onclick="change()">DOM Calculator</h1>
+        <p class="text">type in a string of equation and click GO.</p>
+        <input type="text" id="uin" value="3 * (21 + 1)" />
+        <input type="button" onclick="comp('uin')" value="GO"/>
+        <p class="text">Answer : </p>
+        <p id="ans">
+            answer
+        </p>
+    </body>
+</html>
