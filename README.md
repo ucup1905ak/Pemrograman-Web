@@ -14,4 +14,4 @@ Navigate to specific assignments and projects:
 
 - 📁 [005](./Minggu05/) - Assignment/Project 005
 - 📁 [009](./Minggu09/) - Week 9: JavaScript Form 
-- 📁 [010](./Minggu10/) - Week 9: JavaScript Form Validation & 
+- 📁 [010](./Minggu10/) - Week 10: DOM
